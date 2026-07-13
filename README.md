@@ -34,33 +34,48 @@
 #### 1. 准备测试文件
 在终端中或通过文本编辑器创建一个用于测试的明文文件（例如 `av.txt`），写入需要保护的私密内容。
 * *示例文件内容*：
-  ![明文内容样例](1.jpg)
+
+  ![明文内容样例]<img width="2536" height="392" alt="2" src="https://github.com/user-attachments/assets/61061bc1-109c-4a67-bf3e-b7806eee4c8c" />
+
+
 
 #### 2. 编译或确认可执行程序
 若获取了源码可使用 `gcc encrypt-new.c -o tools` 编译生成名为 `tools` 的程序，并通过 `ls` 命令确认程序已成功存在于当前目录。
-* *编译与列表查看*：
-  ![编译与查看列表](4.jpg)
+* *示例文件内容*：
 
+  ![明文内容样例]<img width="2842" height="362" alt="1" src="https://github.com/user-attachments/assets/3c1c6add-e2d8-4e87-8a2e-e05f9da4412e" />
+
+* *编译与列表查看*：
 #### 3. 运行程序并执行文件加密
 在运行前，请确保文件拥有可执行权限（`chmod +x tools`）。接着执行 `./tools` 启动程序：
 1. 第一次输入一个不存在的路径时，程序会贴心提示 `文件不存在或无法打开`。
 2. 重新运行程序，输入正确的绝对路径（如 `/root/av.txt`），程序识别成功后会提示：`文件存在。你好请你输入密码，如:123456`。
 3. 输入您的自定义密码（例如 `123456`），终端打印 `恭喜你加密或解密成功`。
 * *加密运行过程*：
-  ![加密操作流程](2.jpg)
+
+  ![加密操作流程](<img width="1346" height="898" alt="3" src="https://github.com/user-attachments/assets/1de6422f-0b20-4736-bd59-20e95384c9aa" />
+
+)
 
 #### 4. 查看加密后的密文效果
 文件加密成功后，原有的明文数据在底层已被彻底打乱。
 * **通过终端查看**：使用 `cat av.txt` 命令，终端将输出一连串无法解析的乱码。
-  ![终端密文乱码](3.jpg)
+
+  ![终端密文乱码](<img width="2863" height="1038" alt="4" src="https://github.com/user-attachments/assets/39742756-e540-4e2c-b1e5-0780f20cdd73" />
+
+)
 * **通过文本编辑器查看**：使用 Mousepad 等编辑器打开该文件，内容已变成完全无法阅读的十六进制与特殊乱码字符。
-  ![编辑器密文乱码](5.jpg)
+
+  ![编辑器密文乱码](<img width="1804" height="998" alt="5" src="https://github.com/user-attachments/assets/0f7c7cb0-14fc-4582-a5a7-e924cc132a8b" />
+
+)
 
 #### 5. 再次运行程序执行解密还原
 当需要恢复原文件时，**再次运行相同的加密程序**（`./tools`），输入相同的文件路径（`/root/av.txt`）以及**完全一致的密码**（`123456`）。
 * 解密成功后，再次使用 `cat av.txt` 查看，可以看到文件内容已被完美还原，明文信息完好无损。
 * *解密还原流程*：
-  ![解密还原流程](6.jpg)
+  ![解密还原流程](<img width="2603" height="999" alt="6" src="https://github.com/user-attachments/assets/c0695de6-ef6d-4511-aa2d-3c84f2dc7f0c" />
+)
 
 ---
 
